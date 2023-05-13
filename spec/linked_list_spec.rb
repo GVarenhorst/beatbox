@@ -20,7 +20,7 @@ RSpec.describe Node do
     expect(list.count).to eq(1)
   end
 
-  xit "can list nodes as a string" do
+  it "can list nodes as a string" do
 
     list = LinkedList.new
     list.append("doop")
