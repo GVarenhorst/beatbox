@@ -30,13 +30,13 @@ class LinkedList
     end 
   end
 
-  # def to_string
-  #   current_node = @head
-  #   bbox = []
-  #   until current_node == nil
-  #     bbox << current_node.data
-  #     current_node = current_node.next_node
-  #   end
-  #     bbox.join(" ")
-  # end
+  def to_string
+    current_node = @head
+    bbox = []
+    until current_node == nil
+      bbox << current_node.data
+      current_node = current_node.next_node
+    end
+      bbox.join(" ")
+  end
 end

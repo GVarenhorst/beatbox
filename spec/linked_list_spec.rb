@@ -17,7 +17,7 @@ RSpec.describe Node do
     # require 'pry'; binding.pry
     expect(list.head.data).to eq("doop")
     expect(list.head.next_node).to eq(nil)
-    # expect(list.count).to eq(1)
+    expect(list.count).to eq(1)
   end
 
   xit "can list nodes as a string" do
@@ -33,6 +33,9 @@ RSpec.describe Node do
     list = LinkedList.new
     
     list.append("doop")
+
+    expect(list.to_string).to eq("doop")
+
     list.append("deep")
 
     expect(list.count).to eq(2)
