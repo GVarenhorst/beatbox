@@ -28,15 +28,16 @@ RSpec.describe Node do
     expect(list.to_string).to eq("doop")
   end
 
-  xit "can append multiple nodes" do
+  
+  it "can append multiple nodes" do
 
     list = LinkedList.new
-    
     list.append("doop")
-
+    
     expect(list.to_string).to eq("doop")
-
+    
     list.append("deep")
+    # require 'pry'; binding.pry
 
     expect(list.count).to eq(2)
     expect(list.to_string).to eq("doop deep")
