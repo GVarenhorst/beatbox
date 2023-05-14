@@ -61,6 +61,17 @@ def prepend(data)
   current_node.next_node = @head
     @head = current_node
 end
+
+def insert(index, data)
+  current_node = @head
+  (index - 1).times do
+    current_node = current_node.next_node
+  end
+  new_node = Node.new(data)
+  new_node.next_node = current_node.next_node
+  current_node.next_node = new_node
+end
+
 # Next is to add find, pop and includes? methods.
 
 # find takes two parameters, the first indicates the first position to return and the second parameter specifies how many elements to return.
