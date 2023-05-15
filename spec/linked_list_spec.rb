@@ -74,7 +74,7 @@ RSpec.describe Node do
     expect(list.find(1,3)).to eq("woo shi shu")
   end
 
-  xit "can check for included node data" do
+  it "can check for included node data" do
     list = LinkedList.new
     
     list.append("deep")
