@@ -93,13 +93,13 @@ class LinkedList
   beats.join(" ")
   end
 
-  # def includes?(data)
-  #   current_node = @head
-  #   until current_node.data == data || current_node.next_node == nil
-  #   current_node = current_node.next_node
-  #   end
-  #   current_node.data == data
-  # end
+  def includes?(data)
+    current_node = @head
+    until current_node.data == data || current_node.next_node == nil
+    current_node = current_node.next_node
+    end
+    current_node.data == data
+  end
 
   # def pop
   #   current_node = @head
