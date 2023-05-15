@@ -56,21 +56,21 @@ class LinkedList
 
 # insert will insert one or more elements at a given position in the list. It takes two parameters, the first one is the position at which to insert nodes, the second parameter is the string of data to be inserted.
 
-def prepend(data)
-  current_node = Node.new(data)
-  current_node.next_node = @head
+  def prepend(data)
+    current_node = Node.new(data)
+    current_node.next_node = @head
     @head = current_node
-end
+  end
 
-def insert(index, data)
-  current_node = @head
-  (index - 1).times do
+  def insert(index, data)
+    current_node = @head
+    (index - 1).times do
     current_node = current_node.next_node
   end
-  new_node = Node.new(data)
-  new_node.next_node = current_node.next_node
-  current_node.next_node = new_node
-end
+    new_node = Node.new(data)
+    new_node.next_node = current_node.next_node
+    current_node.next_node = new_node
+  end
 
 # Next is to add find, pop and includes? methods.
 
@@ -79,4 +79,35 @@ end
 # includes? gives back true or false whether the supplied value is in the list.
 
 # pop removes elements the last element from the list.
+
+  def find(index, string_to_return)
+    current_node = @head
+    beats = []
+    index.times do
+      current_node = current_node.next_node
+    end
+    while current_node != nil && beats.length < string_to_return
+    beats << current_node.data
+    current_node = current_node.next_node
+    end
+  beats.join(" ")
+  end
+
+  # def includes?(data)
+  #   current_node = @head
+  #   until current_node.data == data || current_node.next_node == nil
+  #   current_node = current_node.next_node
+  #   end
+  #   current_node.data == data
+  # end
+
+  # def pop
+  #   current_node = @head
+  #   until current_node.next_node.next_node == nil
+  #   current_node = current_node.next_node
+  #   end
+  #   tail = current_node.next_node
+  #   current_node.next_node = nil
+  #   tail.data
+  # end
 end
