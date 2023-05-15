@@ -61,5 +61,46 @@ RSpec.describe Node do
     expect(list.to_string).to eq("dop woo plop suu")
   end
 
+  it "can find and verify node data" do
+    list = LinkedList.new
+    
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    
+    expect(list.find(2,1)).to eq("shi")
+    expect(list.find(1,3)).to eq("woo shi shu")
+  end
+
+  xit "can check for included node data" do
+    list = LinkedList.new
+    
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    
+    expect(list.includes?("deep")).to eq(true)
+    expect(list.includes?("dep")).to eq(false)
+  end
+
+  xit "can remove the last node and return the value" do
+    list = LinkedList.new
+    
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    
+    list.pop
+    list.pop
+
+    expect(list.to_string).to eq("deep woo shi")
+  end
+
 
 end
