@@ -87,7 +87,7 @@ RSpec.describe Node do
     expect(list.includes?("dep")).to eq(false)
   end
 
-  xit "can remove the last node and return the value" do
+  it "can remove the last node and return the value" do
     list = LinkedList.new
     
     list.append("deep")
