@@ -16,7 +16,7 @@ RSpec.describe BeatBox do
     bb = BeatBox.new
 
     bb.append("deep doo ditt")
-    # require 'pry'; binding.pry
+    
     expect(bb.list.head.data).to eq("deep")
     expect(bb.list.head.next_node.data).to eq("doo")
 
