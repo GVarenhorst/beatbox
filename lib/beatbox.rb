@@ -20,4 +20,11 @@ class BeatBox
 
   #for append(data) method I want to split the string and run an enumerable (map_with_index) to separate the string, then assign each string to a new node (insert), starting with the head. The node count should be the same as the number of split strings.
 
+  # For this final section, add a play method to your BeatBox class that will generate the string content of the Beat and use it as input to the say command.
+
+  def play
+    beats = list.to_string
+    `say -r 500 -v Boing #{beats}`
+  end
+
 end
