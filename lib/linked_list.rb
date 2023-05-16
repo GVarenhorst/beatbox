@@ -26,19 +26,6 @@ class LinkedList
     end
     counter
   end
-  # def count
-  #   if @head.nil?
-  #     count = 0
-  #   else
-  #     current_node = @head
-  #     count = 1
-  #   while current_node != nil
-  #     current_node = current_node.next_node
-  #     count +=1
-  #   end
-  #   count
-  #   end
-  # end
 
   def to_string
     current_node = @head
@@ -49,12 +36,6 @@ class LinkedList
     end
       bbox.join(" ")
   end
-
-#   Now we have nodes and a LinkedList class that manages the list. Next step is to add the insert and prepend methods.
-
-# prepend will add nodes to the beginning of the list.
-
-# insert will insert one or more elements at a given position in the list. It takes two parameters, the first one is the position at which to insert nodes, the second parameter is the string of data to be inserted.
 
   def prepend(data)
     current_node = Node.new(data)
@@ -71,14 +52,6 @@ class LinkedList
     new_node.next_node = current_node.next_node
     current_node.next_node = new_node
   end
-
-# Next is to add find, pop and includes? methods.
-
-# find takes two parameters, the first indicates the first position to return and the second parameter specifies how many elements to return.
-
-# includes? gives back true or false whether the supplied value is in the list.
-
-# pop removes elements the last element from the list.
 
   def find(index, string_to_return)
     current_node = @head
