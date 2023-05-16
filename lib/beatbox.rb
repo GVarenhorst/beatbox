@@ -14,9 +14,9 @@ class BeatBox
     data
   end
 
-  # def count
-  #   list.count
-  # end
+  def count
+    list.count
+  end
 
   #for append(data) method I want to split the string and run an enumerable (map_with_index) to separate the string, then assign each string to a new node (insert), starting with the head. The node count should be the same as the number of split strings.
 
