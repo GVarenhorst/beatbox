@@ -16,7 +16,7 @@ RSpec.describe BeatBox do
     bb = BeatBox.new
 
     bb.append("deep doo ditt")
-
+    # require 'pry'; binding.pry
     expect(bb.list.head.data).to eq("deep")
     expect(bb.list.head.next_node.data).to eq("doo")
 
@@ -26,18 +26,18 @@ RSpec.describe BeatBox do
 
   end
 
-  # xit "can play sounds" do
+  it "can play sounds" do
 
-  #   bb = BeatBox.new
+    bb = BeatBox.new
 
-  #   bb.append("deep doo ditt woo hoo shu")
+    bb.append("deep doo ditt woo hoo shu")
 
-  #   expect(bb.count).to eq(6)
-  #   expect(bb.list.count).to eq(6)
+    expect(bb.count).to eq(6)
+    expect(bb.list.count).to eq(6)
 
-    # bb.play 
+    bb.play 
 
-    # expect(bb.play).to_be_truthy
+    expect(bb.play).to eq(`say -r 500 -v Boing "deep doo ditt woo hoo shu"`)
 
-  # end
+  end
 end
