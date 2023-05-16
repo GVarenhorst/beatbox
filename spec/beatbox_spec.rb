@@ -22,7 +22,7 @@ RSpec.describe BeatBox do
 
     bb.append("woo hoo shu")
 
-    # expect(bb.count).to eq(6)
+    expect(bb.count).to eq(6)
 
   end
 
