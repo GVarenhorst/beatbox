@@ -6,7 +6,7 @@ class BeatBox
 
   def append(data)
     node_array = data.split(' ')
-    node_array.map do |string|
+    node_array.each do |string|
       list.append(string)
     end
     data

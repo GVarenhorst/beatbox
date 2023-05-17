@@ -60,8 +60,8 @@ class LinkedList
       current_node = current_node.next_node
     end
     while current_node != nil && beats.length < string_to_return
-    beats << current_node.data
-    current_node = current_node.next_node
+      beats << current_node.data
+      current_node = current_node.next_node
     end
   beats.join(" ")
   end
