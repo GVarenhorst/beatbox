@@ -23,7 +23,8 @@ RSpec.describe BeatBox do
     bb.append("woo hoo shu")
 
     expect(bb.count).to eq(6)
-
+    expect(bb.list.head.data).to eq("deep")
+    expect(bb.list.head.next_node.data).to eq("doo")
   end
 
   it "can play sounds" do
